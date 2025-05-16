@@ -22,11 +22,12 @@ x = ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10
 y = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200]
 plt.plot(x, y)
 plt.fill_between(x, y)
+plt.show()
 # 5. 完成以下图像的绘制，其中曲线函数y=cos(2 pi t)exp(-t)+0.8;z=0.5cos(x^2)+0.8，标出y在[pi/3, pi]的积分面积
 x = np.linspace(0, 6.0, 100)
 y = np.cos(2*np.pi*x)*np.exp(-x)+0.8
 z = 0.5*np.cos(x**2)+0.8
 plt.plot(x, y)
 plt.plot(x, z)
-plt.fill_between(x, y, z, where=(x>=np.pi/3) & (x<=np.pi), alpha=0.5)
+plt.fill_between(x, y, where=(x>=np.pi/3) & (x<=np.pi), alpha=0.5)
 plt.show()
